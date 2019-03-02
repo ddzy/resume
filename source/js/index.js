@@ -21,7 +21,7 @@ window.onload = function () {
   function initSkillDistricutionChart() {
     var ctx = document.getElementById('partial-skill-districution').getContext('2d');
     var myPieChart = new CHART(ctx, {
-      type: 'pie',
+      type: 'doughnut',
       data: {
         datasets: [{
           data: [5, 10, 10, 20, 20, 10, 8, 7, 10],
@@ -60,5 +60,36 @@ window.onload = function () {
   }
 
   function initGithubCollectionChart() {
+    var ctx = document.getElementById('partial-github-collection').getContext('2d');
+    var myPieChart = new CHART(ctx, {
+      type: 'bar',
+      data: {
+        datasets: [{
+          data: [352, 1782, 182, 24, 55],
+          backgroundColor: [
+            'rgba(255, 215, 0, .4)',
+            'rgba(0, 255, 0, .4)',
+            'rgba(0, 255, 255, .4)',
+            'rgba(128, 0, 128, .4)',
+            'rgba(216, 190, 216, .8)'
+          ],
+          label: 'total',
+        }],
+        labels: [
+          'stars',
+          'contributes',
+          'follows',
+          'repositories',
+          'issues',
+        ],
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'github统计',
+          fontSize: 26
+        }
+      }
+    });
   }
 }
