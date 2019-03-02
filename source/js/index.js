@@ -56,6 +56,7 @@ window.onload = function () {
           text: '技能分布',
           fontSize: 26
         },
+        responsive: true,
       }
     });
   }
@@ -89,7 +90,8 @@ window.onload = function () {
           display: true,
           text: 'github统计',
           fontSize: 26
-        }
+        },
+        responsive: true
       }
     });
   }
@@ -119,6 +121,7 @@ window.onload = function () {
           text: 'leetcode进度',
           fontSize: 26
         },
+        responsive: true
       }
     });
   }
