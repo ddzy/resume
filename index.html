@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>大三老猫-个人简历</title>
-  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./source/less/index.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
   <script src="./source/js/index.js"></script>
 </head>
+
 <body>
   <div id="app">
     <div class="admin-wrapper">
@@ -17,27 +20,48 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-4">
-              技能分布
+              <div class="resume-partial-same-wrapper partial-skill-districution-box">
+                <h3>技能分布</h3>
+                <canvas id="partial-skill-districution"></canvas>
+              </div>
             </div>
             <div class="col-lg-4">
-              个人简介
+              <div class="resume-partial-same-wrapper partial-self-introduction-box">
+                <h3>个人简介</h3>
+                <canvas id="partial-self-introduction"></canvas>
+              </div>
             </div>
             <div class="col-lg-4">
-              github统计
+              <div class="resume-partial-same-wrapper partial-github-collection-box">
+                <h3>github统计</h3>
+                <canvas id="partial-github-collection"></canvas>
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-3">
-              详细介绍/教育经历
+              <div class="resume-partial-same-wrapper partial-personal-advantage-box">
+                <h3>个人优势</h3>
+                <canvas id="partial-personal-advantage"></canvas>
+              </div>
             </div>
             <div class="col-lg-3">
-              项目经历
+              <div class="resume-partial-same-wrapper partial-project-experience-box">
+                <h3>项目经历</h3>
+                <canvas id="partial-project-experience"></canvas>
+              </div>
             </div>
             <div class="col-lg-3">
-              掌握技能
+              <div class="resume-partial-same-wrapper partial-grasp-skill-box">
+                <h3>掌握技能</h3>
+                <canvas id="partial-grasp-skill"></canvas>
+              </div>
             </div>
             <div class="col-lg-3">
-              求职意向
+              <div class="resume-partial-same-wrapper partial-career-objective-box">
+                <h3>求职意向</h3>
+                <canvas id="partial-career-objective"></canvas>
+              </div>
             </div>
           </div>
         </div>
@@ -45,4 +69,5 @@
     </div>
   </div>
 </body>
+
 </html>
