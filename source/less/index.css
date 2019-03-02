@@ -1,13 +1,20 @@
 body,
 h1,
 h2,
-h3 {
+h3,
+p {
   margin: 0;
   padding: 0;
 }
 html,
 body {
   height: 100%;
+}
+.container-fluid {
+  height: 100%;
+}
+.container-fluid .row {
+  height: auto;
 }
 #app {
   height: 100%;
@@ -20,8 +27,37 @@ body {
   background-color: #eee9df;
 }
 .resume-partial-same-wrapper {
+  padding: 10px 0 60px;
   text-align: center;
   background-image: url(../images/resume_partial_bg.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+.partial-self-introduction-box .self-introduction-avatar-box .introduction-avatar-content {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-image: url(../images/miaomiao.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.partial-self-introduction-box .self-introduction-info-box .self-introduction-info-content {
+  padding: 20px;
+}
+.partial-self-introduction-box .self-introduction-info-box .self-introduction-info-content .introduction-info-same {
+  display: flex;
+  margin: 4px 0;
+}
+.partial-self-introduction-box .self-introduction-info-box .self-introduction-info-content .info-col-left-same {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  font-size: 18px;
+}
+.partial-self-introduction-box .self-introduction-info-box .self-introduction-info-content .info-col-right-same {
+  flex: 1;
+  padding-left: 50px;
+  text-align: left;
+  font-size: 16px;
 }
