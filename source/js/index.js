@@ -12,6 +12,7 @@ window.onload = function () {
     initChartGlobalSettings();
     initSkillDistricutionChart();
     initGithubCollectionChart();
+    initLeetcodePrograssChart();
   }
 
   function initChartGlobalSettings() {
@@ -89,6 +90,35 @@ window.onload = function () {
           text: 'github统计',
           fontSize: 26
         }
+      }
+    });
+  }
+
+  function initLeetcodePrograssChart() {
+    var ctx = document.getElementById('partial-leetcode-prograss').getContext('2d');
+    var myPieChart = new CHART(ctx, {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [60, 2, 0],
+          backgroundColor: [
+            'rgba(0, 255, 0, .4)',
+            'rgba(128, 0, 128, .4)',
+            'rgba(216, 190, 216, .4)'
+          ],
+        }],
+        labels: [
+          'easy',
+          'medium',
+          'hard'
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'leetcode进度',
+          fontSize: 26
+        },
       }
     });
   }
