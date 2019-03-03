@@ -11,7 +11,7 @@ window.onload = function () {
   function initCharts() {
     initSkillDistricutionChart();
     initGithubCollectionChart();
-    // initLeetcodePrograssChart();
+    initLeetcodePrograssChart();
   }
 
   function initSkillDistricutionChart() {
@@ -176,32 +176,71 @@ window.onload = function () {
   }
 
   function initLeetcodePrograssChart() {
-    var ctx = document.getElementById('partial-leetcode-prograss').getContext('2d');
-    var myPieChart = new CHART(ctx, {
-      type: 'pie',
-      data: {
-        datasets: [{
-          data: [60, 2, 0],
-          backgroundColor: [
-            'rgba(0, 255, 0, .4)',
-            'rgba(128, 0, 128, .4)',
-            'rgba(216, 190, 216, .4)'
-          ],
-        }],
-        labels: [
-          'easy',
-          'medium',
-          'hard'
-        ]
-      },
-      options: {
-        title: {
-          display: true,
-          text: 'leetcode进度',
-          fontSize: 26
-        },
-        responsive: true
+    var data = [{
+      item: 'easy',
+      count: 60,
+      percent: 0.06
+    }, {
+      item: 'medium',
+      count: 2,
+      percent: 0.002
+    }, {
+      item: 'hard',
+      count: 0,
+      percent: 0
+    }];
+    var chart = new G2.Chart({
+      container: 'partial-leetcode-prograss',
+      forceFit: true,
+      padding: [160, 60, 50]
+    });
+    chart.source(data, {
+      percent: {
+        formatter: function formatter(val) {
+          val = val * 100 + '%';
+          return val;
+        }
       }
     });
+    chart.coord('theta', {
+      radius: 0.75,
+      innerRadius: 0.6
+    });
+    chart.tooltip({
+      showTitle: false,
+    });
+    // 辅助文本
+    chart.guide().html({
+      position: ['50%', '50%'],
+      html: '<div style="color:#8c8c8c;font-size: 14px;text-align: center;width: 10em;">总数<br><span style="color:#8c8c8c;font-size:20px">998</span>道</div>',
+      alignX: 'middle',
+      alignY: 'middle'
+    });
+    chart.guide().text({
+      content: 'leetcode进度',
+      top: true,
+      position: ['50%', '-30%'],
+      style: {
+        fill: '#666',
+        fontSize: 30,
+        textAlign: 'center',
+        fontWeight: 'bold'
+      },
+    });
+    var interval = chart.intervalStack().position('percent').color('item').label('percent', {
+      formatter: function formatter(val, item) {
+        return item._origin.item + ': ' + val;
+      }
+    }).tooltip('item*percent', function (item, percent) {
+      return {
+        name: item,
+        value: percent * 1000
+      };
+    }).style({
+      lineWidth: 1,
+      stroke: '#fff'
+    });
+
+    chart.render();
   }
 }
