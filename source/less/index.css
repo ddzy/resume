@@ -2,7 +2,9 @@ body,
 h1,
 h2,
 h3,
-p {
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -10,6 +12,9 @@ h3 {
   font-size: 24px;
   color: #666;
   font-weight: bold;
+}
+ul {
+  list-style-type: none;
 }
 .admin-content {
   background-color: #eee9df;
@@ -48,4 +53,36 @@ h3 {
   padding-left: 50px;
   text-align: left;
   font-size: 16px;
+}
+.partial-project-experience-box {
+  height: 100%;
+  padding: 60px 20px 105px 24px;
+}
+.partial-project-experience-box .project-experience-content {
+  margin-top: 10px;
+}
+.partial-project-experience-box .project-experience-content .experience-content-list-item-same {
+  margin-top: 5px;
+  padding: 8px 0;
+  border-bottom: 2px solid #ccc;
+}
+.partial-project-experience-box .project-experience-content .item-project-name-same {
+  color: #444;
+  cursor: pointer;
+}
+.partial-project-experience-box .project-experience-content .item-project-name-same:hover {
+  color: #1890ff;
+  text-decoration: underline;
+}
+.partial-project-experience-box .project-experience-content .item-project-description-same {
+  text-align: left;
+}
+.partial-project-experience-box .project-experience-content .item-project-address-same {
+  text-align: left;
+}
+.partial-project-experience-box .project-experience-content .item-project-skill-same {
+  text-align: left;
+}
+.partial-project-experience-box .project-experience-content .item-project-review-same {
+  text-align: left;
 }

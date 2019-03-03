@@ -1,4 +1,4 @@
-body, h1, h2, h3, p {
+body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
 }
@@ -6,6 +6,9 @@ h3 {
   font-size: 24px;
   color: #666;
   font-weight: bold;
+}
+ul {
+  list-style-type: none;
 }
 .admin-content {
   background-color: #eee9df;
@@ -50,6 +53,41 @@ h3 {
         text-align: left;
         font-size: 16px;
       }
+    }
+  }
+}
+
+// 项目经历
+.partial-project-experience-box {
+  height: 100%;
+  padding: 60px 20px 105px 24px;
+
+  .project-experience-content {
+    margin-top: 10px;
+    .experience-content-list-item-same {
+      margin-top: 5px;
+      padding: 8px 0;
+      border-bottom: 2px solid #ccc;
+    }
+    .item-project-name-same {
+      color: #444;
+      cursor: pointer;
+      &:hover {
+        color: #1890ff;
+        text-decoration: underline;
+      }
+    }
+    .item-project-description-same {
+      text-align: left;
+    }
+    .item-project-address-same {
+      text-align: left;
+    }
+    .item-project-skill-same {
+      text-align: left;
+    }
+    .item-project-review-same {
+      text-align: left;
     }
   }
 }
