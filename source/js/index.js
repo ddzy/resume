@@ -153,7 +153,7 @@ window.onload = function () {
     var chart = new G2.Chart({
       container: 'partial-github-collection',
       forceFit: true,
-      padding: [120, 100, 120, 100]
+      padding: [120, 80, 120, 110]
     });
     chart
       .source(data, {
