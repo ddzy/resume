@@ -10,7 +10,7 @@ window.onload = function () {
 
   function initCharts() {
     initSkillDistricutionChart();
-    // initGithubCollectionChart();
+    initGithubCollectionChart();
     // initLeetcodePrograssChart();
   }
 
@@ -120,38 +120,59 @@ window.onload = function () {
   }
 
   function initGithubCollectionChart() {
-    var ctx = document.getElementById('partial-github-collection').getContext('2d');
-    var myPieChart = new CHART(ctx, {
-      type: 'bar',
-      data: {
-        datasets: [{
-          data: [352, 1782, 182, 24, 55],
-          backgroundColor: [
-            'rgba(255, 215, 0, .4)',
-            'rgba(0, 255, 0, .4)',
-            'rgba(0, 255, 255, .4)',
-            'rgba(128, 0, 128, .4)',
-            'rgba(216, 190, 216, .8)'
-          ],
-          label: 'total',
-        }],
-        labels: [
-          'stars',
-          'contributes',
-          'follows',
-          'repositories',
-          'issues',
-        ],
+    var data = [
+      {
+        name: 'stars',
+        vote: 352
       },
-      options: {
-        title: {
-          display: true,
-          text: 'github统计',
-          fontSize: 26
-        },
-        responsive: true
+      {
+        name: 'contributes',
+        vote: 1782
+      },
+      {
+        name: 'follows',
+        vote: 182
+      },
+      {
+        name: 'repositories',
+        vote: 24
+      },
+      {
+        name: 'issues',
+        vote: 55
+      },
+    ];
+
+    var chart = new G2.Chart({
+      container: 'partial-github-collection',
+      forceFit: true,
+      padding: [120, 100, 120, 100]
+    });
+    chart.source(data, {
+      vote: {
+        min: 0
       }
     });
+    chart.axis('vote', {
+      labels: null,
+      title: null,
+      line: null,
+      tickLine: null
+    });
+    chart.interval().position('name*vote').color('name').label('vote');
+    chart.guide().text({
+      content: 'github统计',
+      top: true,
+      position: ['50%', '-30%'],
+      style: {
+        fill: '#666',
+        fontSize: 30,
+        textAlign: 'center',
+        fontWeight: 'bold'
+      },
+    });
+
+    chart.render();
   }
 
   function initLeetcodePrograssChart() {
