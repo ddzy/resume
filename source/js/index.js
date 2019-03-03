@@ -103,18 +103,25 @@ window.onload = function () {
     });
     chart.source(data);
     chart.coord('theta');
-    chart.intervalStack().position('value').color('type').shape('platelet').label('type');
-    chart.guide().text({
-      content: '技能分布',
-      top: true,
-      position: ['50%', '-30%'],
-      style: {
-        fill: '#666',
-        fontSize: 30,
-        textAlign: 'center',
-        fontWeight: 'bold'
-      },
-    });
+    chart
+      .intervalStack()
+      .position('value')
+      .color('type')
+      .shape('platelet')
+      .label('type');
+    chart
+      .guide()
+      .text({
+        content: '技能分布',
+        top: true,
+        position: ['50%', '-30%'],
+        style: {
+          fill: '#666',
+          fontSize: 30,
+          textAlign: 'center',
+          fontWeight: 'bold'
+        },
+      });
 
     chart.render();
   }
@@ -148,29 +155,37 @@ window.onload = function () {
       forceFit: true,
       padding: [120, 100, 120, 100]
     });
-    chart.source(data, {
-      vote: {
-        min: 0
-      }
-    });
-    chart.axis('vote', {
-      labels: null,
-      title: null,
-      line: null,
-      tickLine: null
-    });
-    chart.interval().position('name*vote').color('name').label('vote');
-    chart.guide().text({
-      content: 'github统计',
-      top: true,
-      position: ['50%', '-30%'],
-      style: {
-        fill: '#666',
-        fontSize: 30,
-        textAlign: 'center',
-        fontWeight: 'bold'
-      },
-    });
+    chart
+      .source(data, {
+        vote: {
+          min: 0
+        }
+      });
+    chart
+      .axis('vote', {
+        labels: null,
+        title: null,
+        line: null,
+        tickLine: null
+      });
+    chart
+      .interval()
+      .position('name*vote')
+      .color('name')
+      .label('vote');
+    chart
+      .guide()
+      .text({
+        content: 'github统计',
+        top: true,
+        position: ['50%', '-30%'],
+        style: {
+          fill: '#666',
+          fontSize: 30,
+          textAlign: 'center',
+          fontWeight: 'bold'
+        },
+      });
 
     chart.render();
   }
@@ -210,36 +225,47 @@ window.onload = function () {
       showTitle: false,
     });
     // 辅助文本
-    chart.guide().html({
-      position: ['50%', '50%'],
-      html: '<div style="color:#8c8c8c;font-size: 14px;text-align: center;width: 10em;">总数<br><span style="color:#8c8c8c;font-size:20px">998</span>道</div>',
-      alignX: 'middle',
-      alignY: 'middle'
-    });
-    chart.guide().text({
-      content: 'leetcode进度',
-      top: true,
-      position: ['50%', '-30%'],
-      style: {
-        fill: '#666',
-        fontSize: 30,
-        textAlign: 'center',
-        fontWeight: 'bold'
-      },
-    });
-    var interval = chart.intervalStack().position('percent').color('item').label('percent', {
-      formatter: function formatter(val, item) {
-        return item._origin.item + ': ' + val;
-      }
-    }).tooltip('item*percent', function (item, percent) {
-      return {
-        name: item,
-        value: percent * 1000
-      };
-    }).style({
-      lineWidth: 1,
-      stroke: '#fff'
-    });
+    chart
+      .guide()
+      .html({
+        position: ['50%', '50%'],
+        html: '<div style="color:#8c8c8c;font-size: 14px;text-align: center;width: 10em;">总数<br><span style="color:#8c8c8c;font-size:20px">998</span>道</div>',
+        alignX: 'middle',
+        alignY: 'middle'
+      });
+    chart
+      .guide()
+      .text({
+        content: 'leetcode进度',
+        top: true,
+        position: ['50%', '-30%'],
+        style: {
+          fill: '#666',
+          fontSize: 30,
+          textAlign: 'center',
+          fontWeight: 'bold'
+        },
+      });
+
+    var interval = chart
+      .intervalStack()
+      .position('percent')
+      .color('item')
+      .label('percent', {
+        formatter: function formatter(val, item) {
+          return item._origin.item + ': ' + val;
+        }
+      })
+      .tooltip('item*percent', function (item, percent) {
+        return {
+          name: item,
+          value: percent * 1000
+        };
+      })
+      .style({
+        lineWidth: 1,
+        stroke: '#fff'
+      });
 
     chart.render();
   }
