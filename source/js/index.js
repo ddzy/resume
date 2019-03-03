@@ -117,7 +117,7 @@ window.onload = function () {
         position: ['50%', '-30%'],
         style: {
           fill: '#666',
-          fontSize: 30,
+          fontSize: 24,
           textAlign: 'center',
           fontWeight: 'bold'
         },
@@ -181,7 +181,7 @@ window.onload = function () {
         position: ['50%', '-30%'],
         style: {
           fill: '#666',
-          fontSize: 30,
+          fontSize: 24,
           textAlign: 'center',
           fontWeight: 'bold'
         },
@@ -241,7 +241,7 @@ window.onload = function () {
         position: ['50%', '-30%'],
         style: {
           fill: '#666',
-          fontSize: 30,
+          fontSize: 24,
           textAlign: 'center',
           fontWeight: 'bold'
         },
