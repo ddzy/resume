@@ -62,7 +62,7 @@ ul {
   margin-top: 10px;
 }
 .partial-project-experience-box .project-experience-content .experience-content-list-item-same {
-  margin-top: 5px;
+  margin-top: 8px;
   padding: 8px 0;
   border-bottom: 2px solid #ccc;
 }
@@ -85,4 +85,23 @@ ul {
 }
 .partial-project-experience-box .project-experience-content .item-project-review-same {
   text-align: left;
+}
+.partial-project-experience-box .project-experience-content .project-text-same {
+  font-size: 14px;
+  color: #444;
+}
+.partial-grasp-skill-box {
+  height: 100%;
+  padding: 60px 20px 105px 30px;
+}
+.partial-grasp-skill-box .grasp-skill-content {
+  margin-top: 30px;
+}
+.partial-grasp-skill-box .grasp-skill-content-list .grasp-skill-content-item {
+  text-align: left;
+  margin-top: 8px;
+}
+.partial-grasp-skill-box .grasp-skill-content-list .grasp-skill-content-text {
+  font-size: 14px;
+  color: #444;
 }
