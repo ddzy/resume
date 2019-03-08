@@ -134,7 +134,7 @@ window.onload = function () {
       },
       {
         name: 'contributes',
-        vote: 1840
+        vote: 1905
       },
       {
         name: 'follows',
@@ -142,11 +142,11 @@ window.onload = function () {
       },
       {
         name: 'repositories',
-        vote: 24
+        vote: 25
       },
       {
         name: 'issues',
-        vote: 57
+        vote: 61
       },
     ];
 
