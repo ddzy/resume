@@ -134,7 +134,7 @@ window.onload = function () {
       },
       {
         name: 'contributes',
-        vote: 1905
+        vote: 1970
       },
       {
         name: 'follows',
