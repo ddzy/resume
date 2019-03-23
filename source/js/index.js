@@ -34,23 +34,15 @@ window.onload = function () {
       },
       {
         type: 'react',
-        value: 20
+        value: 25
       },
       {
         type: 'vue',
         value: 5
       },
       {
-        type: 'node',
-        value: 8
-      },
-      {
-        type: 'python',
-        value: 7
-      },
-      {
         type: 'vscode',
-        value: 15
+        value: 25
       }
     ];
 
@@ -130,11 +122,11 @@ window.onload = function () {
     var data = [
       {
         name: 'stars',
-        vote: 352
+        vote: 160
       },
       {
         name: 'contributes',
-        vote: 1970
+        vote: 2070
       },
       {
         name: 'follows',
@@ -146,7 +138,7 @@ window.onload = function () {
       },
       {
         name: 'issues',
-        vote: 61
+        vote: 63
       },
     ];
 
