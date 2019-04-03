@@ -122,11 +122,11 @@ window.onload = function () {
     var data = [
       {
         name: 'stars',
-        vote: 160
+        vote: 223
       },
       {
         name: 'contributes',
-        vote: 2070
+        vote: 2150
       },
       {
         name: 'follows',
@@ -134,7 +134,7 @@ window.onload = function () {
       },
       {
         name: 'repositories',
-        vote: 25
+        vote: 28
       },
       {
         name: 'issues',
