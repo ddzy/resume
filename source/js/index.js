@@ -126,7 +126,7 @@ window.onload = function () {
       },
       {
         name: 'contributes',
-        vote: 2150
+        vote: 2152
       },
       {
         name: 'follows',
