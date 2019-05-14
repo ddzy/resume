@@ -1,0 +1,135 @@
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  font-size: 24px;
+  color: #666;
+  font-weight: bold;
+}
+ul {
+  list-style-type: none;
+}
+.admin-content {
+  background-color: #eee9df;
+}
+.resume-partial-same-wrapper {
+  padding: 15px 0 60px;
+  text-align: center;
+  background-image: url(../images/resume_partial_bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+// 个人简介
+.partial-self-introduction-box {
+  .self-introduction-avatar-box {
+    .introduction-avatar-content {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-image: url(../images/miaomiao.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  .self-introduction-info-box {
+    .self-introduction-info-content {
+      padding: 20px;
+      .introduction-info-same {
+        display: flex;
+        margin: 4px 0;
+      }
+      .info-col-left-same {
+        flex: 1;
+        text-align: right;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .info-col-right-same {
+        flex: 1;
+        padding-left: 50px;
+        text-align: left;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// 项目经历
+.partial-project-experience-box {
+  height: 100%;
+  padding: 60px 20px 105px 24px;
+
+  .project-experience-content {
+    margin-top: 10px;
+    .experience-content-list-item-same {
+      margin-top: 8px;
+      padding: 8px 0;
+      border-bottom: 2px solid #ccc;
+    }
+    .item-project-name-same {
+      color: #444;
+      cursor: pointer;
+      &:hover {
+        color: #1890ff;
+        text-decoration: underline;
+      }
+    }
+    .item-project-description-same {
+      text-align: left;
+    }
+    .item-project-address-same {
+      text-align: left;
+    }
+    .item-project-skill-same {
+      text-align: left;
+    }
+    .item-project-review-same {
+      text-align: left;
+    }
+    .project-text-same {
+      font-size: 14px;
+      color: #444;
+    }
+  }
+}
+
+// 掌握技能
+.partial-grasp-skill-box {
+  height: 100%;
+  padding: 60px 20px 105px 30px;
+  .grasp-skill-content {
+    margin-top: 30px;
+  }
+  .grasp-skill-content-list {
+    .grasp-skill-content-item {
+      text-align: left;
+      margin-top: 8px;
+    }
+    .grasp-skill-content-text {
+      font-size: 14px;
+      color: #444;
+    }
+  }
+}
+
+// 求职意向
+.partial-career-objective-box {
+  height: 100%;
+  padding: 60px 20px 105px 30px;
+  .career-objective-content {
+    padding-left: 20px;
+  }
+  .career-objective-content-list {
+    .career-objective-content-item {
+      text-align: left;
+      margin-top: 30px;
+    }
+    .career-objective-content-label {
+      font-size: 20px;
+    }
+
+  }
+}
