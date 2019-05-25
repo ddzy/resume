@@ -116,7 +116,7 @@ window.onload = function () {
           fontSize: 24,
           textAlign: 'center',
           fontWeight: 'bold'
-        },
+        }
       });
 
     chart.render();
@@ -149,7 +149,7 @@ window.onload = function () {
       {
         name: 'issues',
         vote: 65
-      },
+      }
     ];
 
     var chart = new G2.Chart({
@@ -186,7 +186,7 @@ window.onload = function () {
           fontSize: 24,
           textAlign: 'center',
           fontWeight: 'bold'
-        },
+        }
       });
 
     chart.render();
@@ -285,7 +285,7 @@ window.onload = function () {
           fontSize: 24,
           textAlign: 'center',
           fontWeight: 'bold'
-        },
+        }
       });
 
     var interval = chart
