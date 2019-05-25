@@ -9,7 +9,7 @@ li {
   padding: 0;
 }
 h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #666;
   font-weight: bold;
 }
@@ -20,15 +20,15 @@ ul {
   background-color: #eee9df;
 }
 .resume-partial-same-wrapper {
-  padding: 15px 0 60px;
+  padding: 0.9375rem 0 3.75rem;
   text-align: center;
   background-image: url(../images/resume_partial_bg.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .partial-self-introduction-box .self-introduction-avatar-box .introduction-avatar-content {
-  width: 64px;
-  height: 64px;
+  width: 4rem;
+  height: 4rem;
   margin: 0 auto;
   border-radius: 50%;
   background-image: url(../images/miaomiao.jpg);
@@ -36,35 +36,35 @@ ul {
   background-repeat: no-repeat;
 }
 .partial-self-introduction-box .self-introduction-info-box .self-introduction-info-content {
-  padding: 20px;
+  padding: 1.25rem;
 }
 .partial-self-introduction-box .self-introduction-info-box .self-introduction-info-content .introduction-info-same {
   display: flex;
-  margin: 4px 0;
+  margin: 0.25rem 0;
 }
 .partial-self-introduction-box .self-introduction-info-box .self-introduction-info-content .info-col-left-same {
   flex: 1;
   text-align: right;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .partial-self-introduction-box .self-introduction-info-box .self-introduction-info-content .info-col-right-same {
   flex: 1;
-  padding-left: 50px;
+  padding-left: 3.125rem;
   text-align: left;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .partial-project-experience-box {
   height: 100%;
-  padding: 60px 20px 105px 24px;
+  padding: 3.75rem 1.25rem 6.5625rem 1.5rem;
 }
 .partial-project-experience-box .project-experience-content {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 .partial-project-experience-box .project-experience-content .experience-content-list-item-same {
-  margin-top: 8px;
-  padding: 8px 0;
-  border-bottom: 2px solid #ccc;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 0.125rem solid #ccc;
 }
 .partial-project-experience-box .project-experience-content .item-project-name-same {
   color: #444;
@@ -87,39 +87,39 @@ ul {
   text-align: left;
 }
 .partial-project-experience-box .project-experience-content .project-text-same {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #444;
 }
 .partial-grasp-skill-box {
   height: 100%;
-  padding: 60px 20px 105px 30px;
+  padding: 3.75rem 1.25rem 6.5625rem 1.875rem;
 }
 .partial-grasp-skill-box .grasp-skill-content {
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 .partial-grasp-skill-box .grasp-skill-content-list .grasp-skill-content-item {
   text-align: left;
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 .partial-grasp-skill-box .grasp-skill-content-list .grasp-skill-content-text {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #444;
 }
 .partial-grasp-skill-box .grasp-skill-content-list .grasp-skill-content-text p {
-  margin-left: 8px;
-  margin-top: 12px;
+  margin-left: 0.5rem;
+  margin-top: 0.75rem;
 }
 .partial-career-objective-box {
   height: 100%;
-  padding: 60px 20px 105px 30px;
+  padding: 3.75rem 1.25rem 6.5625rem 1.875rem;
 }
 .partial-career-objective-box .career-objective-content {
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 .partial-career-objective-box .career-objective-content-list .career-objective-content-item {
   text-align: left;
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 .partial-career-objective-box .career-objective-content-list .career-objective-content-label {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
