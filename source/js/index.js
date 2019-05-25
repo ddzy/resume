@@ -1,6 +1,7 @@
 window.onload = function () {
 
   var G2 = window.G2;
+  var Axios = window.axios;
 
   init();
 
@@ -14,6 +15,9 @@ window.onload = function () {
     initLeetcodePrograssChart();
   }
 
+  /**
+   * 技能分布版块
+   */
   function initSkillDistricutionChart() {
     var data = [
       {
@@ -118,27 +122,33 @@ window.onload = function () {
     chart.render();
   }
 
+  /**
+   * github版块
+   */
   function initGithubCollectionChart() {
-    var data = [
+    var GITHUB_USER_NAME = 'ddzy';
+    var GITHUB_BASE_URL = 'https://api.github.com/users/' + GITHUB_USER_NAME;
+
+    var chart_data = [
       {
         name: 'stars',
-        vote: 223
+        vote: 0
       },
       {
         name: 'contributes',
-        vote: 2282
+        vote: 2856
       },
       {
         name: 'follows',
-        vote: 182
+        vote: 0
       },
       {
         name: 'repositories',
-        vote: 28
+        vote: 0
       },
       {
         name: 'issues',
-        vote: 63
+        vote: 65
       },
     ];
 
@@ -148,7 +158,7 @@ window.onload = function () {
       padding: [120, 80, 120, 110]
     });
     chart
-      .source(data, {
+      .source(chart_data, {
         vote: {
           min: 0
         }
@@ -180,8 +190,47 @@ window.onload = function () {
       });
 
     chart.render();
+
+    /**
+     * 1. 统计commit总数 (x)
+     * 2. 统计star总数 (√)
+     * 3. 统计repo总数 (√)
+     * 4. 统计issue总数 (x)
+     * 5. 统计followers总数 (√)
+     */
+    Axios
+      .get(GITHUB_BASE_URL + '/repos')
+      .then(function (res) {
+        var result = res.data;
+        // TODO: 统计repo总数
+        var repositoryCount = result.length;
+        // TODO: 统计star总数
+        var stargazersCount = 0;
+
+        for (var i = 0, every; every = result[i++];) {
+          stargazersCount += every.stargazers_count;
+        }
+
+        chart_data[0].vote = stargazersCount - 185;
+        chart_data[3].vote = repositoryCount;
+        chart.changeData(chart_data);
+      });
+    Axios
+      .get(GITHUB_BASE_URL)
+      .then(function (res) {
+        var result = res.data;
+
+        // TODO: 统计followers总数
+        var followersCount = result.followers;
+
+        chart_data[2].vote = followersCount;
+        chart.changeData(chart_data);
+      })
   }
 
+  /**
+   * leetcode版块
+   */
   function initLeetcodePrograssChart() {
     var data = [{
       item: 'easy',
