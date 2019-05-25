@@ -105,6 +105,10 @@ ul {
   font-size: 14px;
   color: #444;
 }
+.partial-grasp-skill-box .grasp-skill-content-list .grasp-skill-content-text p {
+  margin-left: 8px;
+  margin-top: 12px;
+}
 .partial-career-objective-box {
   height: 100%;
   padding: 60px 20px 105px 30px;
