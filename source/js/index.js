@@ -136,7 +136,7 @@ window.onload = function () {
       },
       {
         name: 'contributes',
-        vote: 2856
+        vote: 3170
       },
       {
         name: 'follows',
@@ -211,7 +211,7 @@ window.onload = function () {
           stargazersCount += every.stargazers_count;
         }
 
-        chart_data[0].vote = stargazersCount - 185;
+        chart_data[0].vote = stargazersCount;
         chart_data[3].vote = repositoryCount;
         chart.changeData(chart_data);
       });
@@ -225,7 +225,7 @@ window.onload = function () {
 
         chart_data[2].vote = followersCount;
         chart.changeData(chart_data);
-      })
+      });
   }
 
   /**
