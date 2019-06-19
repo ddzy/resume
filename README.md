@@ -1,8 +1,8 @@
-## Desc
+## Description
 
-> Do more and think more
+Do more and think more
 
-[Here is my resume](https://blog.yyge.top/resume)
+- [Here is my resume](https://blog.yyge.top/resume)
 
 ## LICENSE
 
