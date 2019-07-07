@@ -42,3 +42,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
   - 增加`History`区块
 - CHANGELOG
   - 小标题前增加`emoji`图标
+
+## ✍ [2019-7-7]
+
+### Changed
+
+- index.js
+  - 更新`github`有关数据
