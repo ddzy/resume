@@ -16,6 +16,12 @@ h3 {
 ul {
   list-style-type: none;
 }
+.common-small-margin-top {
+  margin-top: 0.5rem;
+}
+.common-medium-margin-top {
+  margin-top: 0.75rem;
+}
 .admin-content {
   background-color: #eee9df;
 }
@@ -36,7 +42,7 @@ ul {
   background-repeat: no-repeat;
 }
 .partial-self-introduction-box .self-introduction-info-box .self-introduction-info-content {
-  padding: 1.25rem;
+  padding: 1.25rem 0;
 }
 .partial-self-introduction-box .self-introduction-info-box .self-introduction-info-content .introduction-info-same {
   display: flex;
@@ -56,7 +62,7 @@ ul {
 }
 .partial-project-experience-box {
   height: 100%;
-  padding: 3.75rem 1.25rem 6.5625rem 1.5rem;
+  padding: 3.75rem 2.6875rem 10.625rem 2.6875rem;
 }
 .partial-project-experience-box .project-experience-content {
   margin-top: 0.625rem;
@@ -92,7 +98,7 @@ ul {
 }
 .partial-grasp-skill-box {
   height: 100%;
-  padding: 3.75rem 1.25rem 6.5625rem 1.875rem;
+  padding: 3.75rem 3.75rem 6.5625rem 4.25rem;
 }
 .partial-grasp-skill-box .grasp-skill-content {
   margin-top: 1.875rem;
@@ -105,13 +111,9 @@ ul {
   font-size: 0.875rem;
   color: #444;
 }
-.partial-grasp-skill-box .grasp-skill-content-list .grasp-skill-content-text p {
-  margin-left: 0.5rem;
-  margin-top: 0.75rem;
-}
 .partial-career-objective-box {
   height: 100%;
-  padding: 3.75rem 1.25rem 6.5625rem 1.875rem;
+  padding: 3.75rem 1.25rem 6.5625rem 3.125rem;
 }
 .partial-career-objective-box .career-objective-content {
   padding-left: 1.25rem;

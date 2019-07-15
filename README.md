@@ -1,6 +1,6 @@
 # resume
 
-## 说明
+## Description
 
 自研简历, 简洁优雅大气:
 
