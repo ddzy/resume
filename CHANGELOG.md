@@ -55,3 +55,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Changed
 
 - 页面样式调整, 使用`rem`替代`px`
+
+## ✍ [2019-8-9]
+
+- index.js
+  - 更新`github`相关数据
