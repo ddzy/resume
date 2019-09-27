@@ -60,3 +60,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 - index.js
   - 更新`github`相关数据
+
+## ✍ [2019-9-27]
+
+### Added
+
+- 新增`个人优势`区块
+
+### Changed
+
+- 更新`Github统计`数据
+- 更新`个人信息`
+- 更新`求职意向`
+- 更新`掌握技能`
+
+### Removed
+
+- 移除`leetcode进度`区块

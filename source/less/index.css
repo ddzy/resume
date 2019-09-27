@@ -32,6 +32,9 @@ ul {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
+.partial-self-introduction-box {
+  padding: 0 0 7rem 0;
+}
 .partial-self-introduction-box .self-introduction-avatar-box .introduction-avatar-content {
   width: 4rem;
   height: 4rem;
@@ -86,6 +89,9 @@ ul {
 .partial-project-experience-box .project-experience-content .item-project-address-same {
   text-align: left;
 }
+.partial-project-experience-box .project-experience-content .item-project-doc-address-same {
+  text-align: left;
+}
 .partial-project-experience-box .project-experience-content .item-project-skill-same {
   text-align: left;
 }
@@ -93,6 +99,21 @@ ul {
   text-align: left;
 }
 .partial-project-experience-box .project-experience-content .project-text-same {
+  font-size: 0.875rem;
+  color: #444;
+}
+.partial-personal-advantage-box {
+  height: 100%;
+  padding: 3.75rem 3.75rem 6.5625rem 4.25rem;
+}
+.partial-personal-advantage-box .personal-advantage-content {
+  margin-top: 1.875rem;
+}
+.partial-personal-advantage-box .personal-advantage-content-list .personal-advantage-content-item {
+  text-align: left;
+  margin-top: 0.5rem;
+}
+.partial-personal-advantage-box .personal-advantage-content-list .personal-advantage-content-text {
   font-size: 0.875rem;
   color: #444;
 }
@@ -110,6 +131,9 @@ ul {
 .partial-grasp-skill-box .grasp-skill-content-list .grasp-skill-content-text {
   font-size: 0.875rem;
   color: #444;
+}
+.partial-grasp-skill-box .grasp-skill-content-list .grasp-skill-content-text .grasp-skill-content-text-item {
+  margin-top: 4px;
 }
 .partial-career-objective-box {
   height: 100%;
