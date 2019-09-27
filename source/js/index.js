@@ -12,7 +12,7 @@ window.onload = function () {
   function initCharts() {
     initSkillDistricutionChart();
     initGithubCollectionChart();
-    initLeetcodePrograssChart();
+    // initLeetcodePrograssChart();
   }
 
   /**
@@ -39,10 +39,6 @@ window.onload = function () {
       {
         type: 'react',
         value: 25
-      },
-      {
-        type: 'vue',
-        value: 5
       },
       {
         type: 'vscode',
@@ -136,7 +132,7 @@ window.onload = function () {
       },
       {
         name: 'contributes',
-        vote: 3590
+        vote: 3926
       },
       {
         name: 'follows',
@@ -147,8 +143,8 @@ window.onload = function () {
         vote: 0
       },
       {
-        name: 'issues',
-        vote: 65
+        name: 'pr',
+        vote: 53
       }
     ];
 
