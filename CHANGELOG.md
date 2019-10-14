@@ -77,3 +77,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Removed
 
 - 移除`leetcode进度`区块
+
+## ✍ [2019-10-15]
+
+### Changed
+
+- 更新`掌握技能`区块的内容
