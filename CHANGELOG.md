@@ -83,3 +83,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Changed
 
 - 更新`掌握技能`区块的内容
+
+## ✍ [2020-8-19]
+
+### Changed
+
+- 移除 `个人优势` 区块, 添加 `工作经历` 区块
+- 更新 `求职意向` 区块
