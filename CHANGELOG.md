@@ -90,3 +90,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 - 移除 `个人优势` 区块, 添加 `工作经历` 区块
 - 更新 `求职意向` 区块
+
+## ✍ [2020-8-31]
+
+- 更新 `个人信息` 区块的链接地址
