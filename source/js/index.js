@@ -22,27 +22,27 @@ window.onload = function () {
     var data = [
       {
         type: 'html',
-        value: 5
+        value: 10
       },
       {
         type: 'css',
-        value: 10
+        value: 15
       },
       {
         type: 'js',
-        value: 10
+        value: 20
       },
       {
         type: 'ts',
         value: 20
       },
       {
-        type: 'react',
-        value: 25
+        type: 'vue',
+        value: 30
       },
       {
         type: 'vscode',
-        value: 25
+        value: 20
       }
     ];
 
