@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>print.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<div style="max-width: 960px; margin: auto; line-height: 1.5; font-size: 16px;">
+  <div>
+    <div style="display: flex; justify-content: space-between;">
+      <div style="width: 100%;">
+        <div>
+          <p style="font-size: 26px; font-weight: bold">前端开发工程师</p>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <div style="flex: 1;">
+            <span>年龄:  </span>
+            <span>26</span>
+          </div>
+          <div style="flex: 2;">
+            <span>期望城市：</span>
+            <span>广州、东莞</span>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 12px;">
+          <div style="flex: 1;">
+            <span>工作年限:  </span>
+            <span>4</span>
+          </div>
+          <div style="flex: 2;">
+            <span>技术栈:    </span>
+            <span>Vue</span>
+          </div>
+        </div>
+      </div>
+      <div style="width: 110px; height: 120px;">
+      </div>
+    </div>
+  </div>
+<h2 id="%F0%9F%93%B1-%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">📱 联系方式</h2>
+<hr>
+<ul>
+<li>Email:           alioeduan@foxmail.com</li>
+<li>QQ:              1766083035</li>
+<li>微信:             guoguoyang_555</li>
+</ul>
+<h2 id="%F0%9F%91%B7%E2%80%8D%E2%99%82%EF%B8%8F-%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF">👷‍♂️ 个人信息</h2>
+<hr>
+<ul>
+<li>姓名:              段朝阳 | 男</li>
+<li>学历:              本科</li>
+<li>个人主页:       <a href="https://yyge.top">https://yyge.top</a></li>
+<li>个人博客:       <a href="https://yyge.top/blog">https://yyge.top/blog</a></li>
+<li>在线简历:       <a href="https://yyge.top/resume">https://yyge.top/resume</a></li>
+<li>Github:           <a href="https://github.com/ddzy">https://github.com/ddzy</a></li>
+</ul>
+<h2 id="%F0%9F%93%9A-%E6%8E%8C%E6%8F%A1%E6%8A%80%E8%83%BD">📚 掌握技能</h2>
+<hr>
+<ul>
+<li>本人大二起自学前端, 独立完成诸如毕设等中小型项目</li>
+<li>熟悉 Vue2、Vue3、TS 等常用前端技术</li>
+<li>涉猎过 Uniapp、Flutter 等小程序及跨端开发技术，并写过 Demo</li>
+<li>涉猎过后端的 NodeJS、MongoDB、Dart 等后端技术</li>
+<li>了解 Linux 基本的操作命令，涉猎过 docker、jenkins、nginx 等工具，例如通过jenkins 结合 GitHub-Webhook 实现自动部署</li>
+<li>经常活跃于 GitHub, Github 提交 commit 超过 4000 次，为<code>utility</code>、<code>react-zmage</code>、<code>vscode-extension-doc-zh</code>等知名项目贡献过代码</li>
+</ul>
+<h2 id="%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-%E5%B7%A5%E4%BD%9C%E7%BB%8F%E5%8E%86">👨‍💻 工作经历</h2>
+<hr>
+<h3 style="overflow: hidden;">
+  <span style="float: left;">2020.11 - 2025.1</span>
+  <span style="float: left; margin-left: 100px;">广州闪趣网络有限公司</span>
+  <span style="float: left; margin-left: 100px;">前端开发工程师</span>
+</h3>
+<ul>
+<li>参与公司自营App-<code>指趣游戏盒</code>的所有Web业务线开发</li>
+<li>参与开发指趣游戏盒、指趣SDK的H5活动页面，与安卓、iOS原生交互</li>
+<li>参与移动端iOS-H5版本的指趣游戏盒的开发，主要在Safari浏览器中运行</li>
+<li>参与公司内部所有后台管理系统的开发和维护</li>
+<li>负责所有前端项目的开发工具、构建工具的升级和迭代：例如老旧 vue-cli 项目升级到 vite；以及自动化部署：例如打包自动上传到阿里云、与运维对接并集成gitlab-cicd</li>
+</ul>
+<h3 style="overflow: hidden;">
+  <span style="float: left;">2019.11 - 2020.05</span>
+  <span style="float: left; margin-left: 100px;">3K游戏</span>
+  <span style="float: left; margin-left: 100px;">实习前端开发工程师</span>
+</h3>
+<ul>
+<li>负责独立 &amp; 海外游戏的整条业务线开发(包括移动端预约、下载、玩家站等 H5 页面)</li>
+<li>参与平台活动业务线开发(移动端微信平台的引流 &amp; 活动 H5 页面)</li>
+<li>参与 PC 端内部数据平台系统的开发(利用 Vue 进行诸如 DatePicker 等组件的封装, 以及维护 YAPI 的接口文档)</li>
+<li>参与团队内部的技术文档的构建(主要是前端方向的知识总结, 以及项目中遇到的难点)</li>
+</ul>
+<h2 id="%F0%9F%93%96-%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86">📖 项目经历</h2>
+<hr>
+<h3 id="%F0%9F%93%97-%E5%85%AC%E5%8F%B8%E5%86%85%E9%83%A8%E7%9A%84%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">📗 公司内部的后台管理系统</h3>
+<h4 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">项目介绍</h4>
+<p>日常迭代和维护指趣游戏盒后台、指趣SDK后台、开发者后台等各类后台管理系统</p>
+<h4 id="%E6%89%80%E7%94%A8%E6%8A%80%E6%9C%AF">所用技术</h4>
+<p>此类后台项目较老，主要使用 Vue2 + Ts 进行开发</p>
+<h3 id="%F0%9F%93%97-%E6%8C%87%E8%B6%A3%E6%B8%B8%E6%88%8F%E7%9B%92-ios-h5%E7%89%88%E6%9C%AC">📗 指趣游戏盒-iOS-H5版本</h3>
+<h4 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">项目介绍</h4>
+<p>该项目为安卓指趣游戏盒的 H5 版本，为了拉拢苹果用户，主要在 Safari 浏览器中运行</p>
+<h4 id="%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80">项目地址</h4>
+<p>需要在 iOS 环境中打开: <a href="https://app-static.96966.com/web/zhiqu-web-common/index.html">https://app-static.96966.com/web/zhiqu-web-common/index.html</a></p>
+<h4 id="%E6%89%80%E7%94%A8%E6%8A%80%E6%9C%AF">所用技术</h4>
+<p>该项目使用最新的 Vite + Vue3 + Ts 技术开发</p>
+<h3 id="%F0%9F%93%97-%E9%97%AA%E8%B6%A3%E5%AE%98%E7%BD%91">📗 闪趣官网</h3>
+<h4 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">项目介绍</h4>
+<p>公司官网，响应式，兼容PC端和移动端</p>
+<h4 id="%E6%89%80%E7%94%A8%E6%8A%80%E6%9C%AF">所用技术</h4>
+<p>Vue2、Ts等</p>
+<h3 id="%F0%9F%93%97-%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AEvue3-ui">📗 [个人项目]vue3-ui</h3>
+<h4 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">项目介绍</h4>
+<p>PC端 Vue3 ui组件库，已实现<code>Table</code>、<code>Watermark</code>等<code>42</code>个常用组件，有基本的单元测试、说明文档，项目打包同时支持<code>esmodule</code>和<code>commonjs</code>，项目仅供测试使用；</p>
+<h4 id="%E5%9C%A8%E7%BA%BF%E5%9C%B0%E5%9D%80">在线地址</h4>
+<p><a href="https://yyge.top/vue3-ui/">https://yyge.top/vue3-ui/</a></p>
+<h4 id="npm%E5%9C%B0%E5%9D%80">npm地址</h4>
+<p><code>npm install @felibrary/vue3-ui</code></p>
+<h4 id="%E6%89%80%E7%94%A8%E6%8A%80%E6%9C%AF">所用技术</h4>
+<p>Vue3、Ts等</p>
+<h3 id="%F0%9F%93%97-%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AEflutter-github-app">📗 [个人项目]flutter-github-app</h3>
+<h4 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">项目介绍</h4>
+<p>Flutter 仿 Github 客户端App，主要实现首页、repo相关页、issue相关页、starred相关页、个人资料页</p>
+<h4 id="%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80">项目地址</h4>
+<p><a href="https://github.com/ddzy/github">https://github.com/ddzy/github</a></p>
+<h4 id="%E6%89%80%E7%94%A8%E6%8A%80%E6%9C%AF">所用技术</h4>
+<p>Flutter、Dart，以及 Github 官方提供的 GraphQL API</p>
+<h3 id="%F0%9F%93%97-%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AEuniapp-cloud-demo">📗 [个人项目]uniapp-cloud-demo</h3>
+<h4 id="%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">项目介绍</h4>
+<p>使用 hbuilderx、uniapp 结合 unicloud 开发的微信小程序文章demo，包括微信小程序登录、uni-id鉴权、文章增删改查、用户个人资料修改等功能</p>
+<h4 id="%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80">项目地址</h4>
+<p><a href="https://github.com/ddzy/uniapp-cloud-demo">https://github.com/ddzy/uniapp-cloud-demo</a></p>
+<h4 id="%E6%89%80%E7%94%A8%E6%8A%80%E6%9C%AF">所用技术</h4>
+<p>uniapp、hbuilderx、unicloud</p>
+<h2 id="%E2%AD%95-%E5%BC%80%E6%BA%90%E7%BB%8F%E5%8E%86">⭕ 开源经历</h2>
+<hr>
+<ul>
+<li><a href="https://github.com/ddzy/vue3-ui">vue3-ui</a>: 一个基于 Vue3 的 PC 端 ui 组件库</li>
+<li><a href="https://github.com/ddzy/fe-necessary-book">fe-necessary-book</a>: 分享我收藏的一些好书, 以及好用的开发软件(<strong>Star</strong>: 1.5K; <strong>Fork</strong>: 186)</li>
+<li><a href="https://github.com/ddzy/ts-utility-plugins">ts-utility-plugins</a>: 纯原生 js/ts 插件、工具方法库(<strong>Star</strong>: 104; <strong>Fork</strong>: 19)</li>
+<li><a href="https://github.com/Liiked/VS-Code-Extension-Doc-ZH">VS-Code-Extension-Doc-ZH</a>: VS Code 插件开发中文文档(<strong>Star</strong>: 2.1K; <strong>Fork</strong>: 60)</li>
+<li><a href="https://github.com/ddzy/file-positioning">file-positioning</a>: 一个 VS Code 插件, 源于国外开发者的一个 <a href="https://github.com/Microsoft/vscode/issues/67035">issue</a>, 快速查找 VS Code 某个工作区文件夹下的文件(<strong>Star</strong>: 4; <strong>Fork</strong>: 4)</li>
+<li><a href="https://github.com/ddzy/cf-rune-calculator">cf-rune-calculator</a>: 为知名网游穿越火线写的一款网页版无尽挑战符文辅助计算工具, 累计访问量已超 <code>10K+</code></li>
+</ul>
+</div>
+</body>
+</html>
