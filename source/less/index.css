@@ -32,9 +32,6 @@ ul {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-.partial-self-introduction-box {
-  padding: 0 0 7rem 0;
-}
 .partial-self-introduction-box .self-introduction-avatar-box .introduction-avatar-content {
   width: 4rem;
   height: 4rem;
@@ -65,7 +62,7 @@ ul {
 }
 .partial-project-experience-box {
   height: 100%;
-  padding: 3.75rem 2.6875rem 10.625rem 2.6875rem;
+  padding: 9.75rem 2.6875rem 16.625rem 2.6875rem;
 }
 .partial-project-experience-box .project-experience-content {
   margin-top: 0.625rem;
@@ -102,24 +99,24 @@ ul {
   font-size: 0.875rem;
   color: #444;
 }
-.partial-personal-advantage-box {
+.partial-work-experience-box {
   height: 100%;
-  padding: 3.75rem 3.75rem 6.5625rem 4.25rem;
+  padding: 9.75rem 3.75rem 10.5625rem 4.25rem;
 }
-.partial-personal-advantage-box .personal-advantage-content {
+.partial-work-experience-box .work-experience-content {
   margin-top: 1.875rem;
 }
-.partial-personal-advantage-box .personal-advantage-content-list .personal-advantage-content-item {
+.partial-work-experience-box .work-experience-content-list .work-experience-content-item {
   text-align: left;
   margin-top: 0.5rem;
 }
-.partial-personal-advantage-box .personal-advantage-content-list .personal-advantage-content-text {
+.partial-work-experience-box .work-experience-content-list .work-experience-content-text {
   font-size: 0.875rem;
   color: #444;
 }
 .partial-grasp-skill-box {
   height: 100%;
-  padding: 3.75rem 3.75rem 6.5625rem 4.25rem;
+  padding: 9.75rem 3.75rem 10.5625rem 4.25rem;
 }
 .partial-grasp-skill-box .grasp-skill-content {
   margin-top: 1.875rem;
@@ -137,7 +134,7 @@ ul {
 }
 .partial-career-objective-box {
   height: 100%;
-  padding: 3.75rem 1.25rem 6.5625rem 3.125rem;
+  padding: 9.75rem 1.25rem 10.5625rem 3.125rem;
 }
 .partial-career-objective-box .career-objective-content {
   padding-left: 1.25rem;
