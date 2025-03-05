@@ -57,9 +57,9 @@
 - 本人大二起自学前端, 独立完成诸如毕设等中小型项目
 - 熟悉 Vue2、Vue3、TS 等常用前端技术
 - 涉猎过 Uniapp、Flutter 等小程序及跨端开发技术，并写过 Demo
-- 涉猎过后端的 NodeJS、MongoDB、Dart 等后端技术
+- 涉猎过 NodeJS、MongoDB、Dart 等后端技术
 - 了解 Linux 基本的操作命令，涉猎过 docker、jenkins、nginx 等工具，例如通过jenkins 结合 GitHub-Webhook 实现自动部署
-- 经常活跃于 GitHub, Github 提交 commit 超过 4000 次，为`utility`、`react-zmage`、`vscode-extension-doc-zh`等知名项目贡献过代码
+- 经常活跃于 GitHub, Github 提交 commit 超过 4000 次，为 `utility`、`react-zmage`、`vscode-extension-doc-zh`等知名项目贡献过代码
 
 ## 👨‍💻 工作经历
 
@@ -130,7 +130,7 @@ Vue2、Ts等
 
 #### 项目介绍
 
-PC端 Vue3 ui组件库，已实现`Table`、`Watermark`等`42`个常用组件，有基本的单元测试、说明文档，项目打包同时支持`esmodule`和`commonjs`，项目仅供测试使用；
+PC端 Vue3 ui组件库，已实现 `Table`、`Watermark`等 `42`个常用组件，有基本的单元测试、说明文档，项目打包同时支持 `esmodule`和 `commonjs`，项目仅供测试使用；
 
 #### 在线地址
 
