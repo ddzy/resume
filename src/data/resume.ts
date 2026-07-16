@@ -129,14 +129,60 @@ export const skillGroups = [
   },
 ]
 
-export const openSource = [
-  ['vue3-ui', 'https://github.com/ddzy/vue3-ui', '一个基于 Vue3 的 PC 端 ui 组件库'],
-  ['fe-necessary-book', 'https://github.com/ddzy/fe-necessary-book', '分享我收藏的一些好书, 以及好用的开发软件(Star: 1.5K; Fork: 186)'],
-  ['ts-utility-plugins', 'https://github.com/ddzy/ts-utility-plugins', '纯原生 js/ts 插件、工具方法库(Star: 104; Fork: 19)'],
-  ['VS-Code-Extension-Doc-ZH', 'https://github.com/Liiked/VS-Code-Extension-Doc-ZH', 'VS Code 插件开发中文文档(Star: 2.1K; Fork: 60)'],
-  ['file-positioning', 'https://github.com/ddzy/file-positioning', '一个 VS Code 插件, 源于国外开发者的一个 issue, 快速查找 VSCode 某个工作区文件夹下的文件'],
-  ['cf-rune-calculator', 'https://github.com/ddzy/cf-rune-calculator', '为知名网游穿越火线写的一款网页版无尽挑战符文辅助计算工具, 累计访问量已超 `10K+`'],
-] as const
+export type OpenSourceProject = {
+  name: string
+  githubHref: string
+  previewHref?: string
+  description: string
+  stars: number
+  forks: number
+}
+
+export const openSourceProjects: readonly OpenSourceProject[] = [
+  {
+    name: 'vue3-ui',
+    githubHref: 'https://github.com/ddzy/vue3-ui',
+    previewHref: 'https://yyge.top/vue3-ui/',
+    description: '一个基于 Vue3 的 PC 端 ui 组件库',
+    stars: 5,
+    forks: 1,
+  },
+  {
+    name: 'fe-necessary-book',
+    githubHref: 'https://github.com/ddzy/fe-necessary-book',
+    description: '分享我收藏的一些好书, 以及好用的开发软件',
+    stars: 1464,
+    forks: 182,
+  },
+  {
+    name: 'ts-utility-plugins',
+    githubHref: 'https://github.com/ddzy/ts-utility-plugins',
+    description: '纯原生 js/ts 插件、工具方法库',
+    stars: 104,
+    forks: 14,
+  },
+  {
+    name: 'VS-Code-Extension-Doc-ZH',
+    githubHref: 'https://github.com/Liiked/VS-Code-Extension-Doc-ZH',
+    description: 'VS Code 插件开发中文文档',
+    stars: 2211,
+    forks: 159,
+  },
+  {
+    name: 'file-positioning',
+    githubHref: 'https://github.com/ddzy/file-positioning',
+    description: '一个 VS Code 插件, 源于国外开发者的一个 issue, 快速查找 VSCode 某个工作区文件夹下的文件',
+    stars: 4,
+    forks: 4,
+  },
+  {
+    name: 'cf-rune-calculator',
+    githubHref: 'https://github.com/ddzy/cf-rune-calculator',
+    description: '为知名网游穿越火线写的一款网页版无尽挑战符文辅助计算工具, 累计访问量已超 `10K+`',
+    stars: 4,
+    forks: 1,
+  },
+]
 
 export const careerObjective = [
   ['期望城市', '广州、东莞'],

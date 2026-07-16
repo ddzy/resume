@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import ExperienceList from './components/ExperienceList.vue'
+import OpenSourceList from './components/OpenSourceList.vue'
 import ProjectList from './components/ProjectList.vue'
 import ResumeHeader from './components/ResumeHeader.vue'
-import { careerObjective, githubStats, openSource, skillGroups, skillTags } from './data/resume'
+import { careerObjective, githubStats, skillGroups, skillTags } from './data/resume'
 </script>
 
 <template>
@@ -26,6 +27,17 @@ import { careerObjective, githubStats, openSource, skillGroups, skillTags } from
       </article>
     </section>
 
+    <section class="panel open-source-panel" aria-labelledby="open-source-title">
+      <div class="open-source-heading">
+        <div>
+          <p class="section-kicker">Open source</p>
+          <h2 id="open-source-title">开源项目</h2>
+        </div>
+        <a href="https://github.com/ddzy" target="_blank" rel="noopener noreferrer">查看 GitHub →</a>
+      </div>
+      <OpenSourceList />
+    </section>
+
     <section class="content-grid">
       <article class="panel experience-panel">
         <div class="section-heading"><p class="section-kicker">Experience</p><h2>工作经验</h2></div>
@@ -43,12 +55,6 @@ import { careerObjective, githubStats, openSource, skillGroups, skillTags } from
           <section v-for="group in skillGroups" :key="group.title" class="skill-group">
             <h3>{{ group.title }}</h3>
             <ol><li v-for="item in group.items" :key="item">{{ item }}</li></ol>
-          </section>
-          <section class="skill-group">
-            <h3>开源</h3>
-            <ol>
-              <li v-for="([name, href, description]) in openSource" :key="name"><a :href="href" target="_blank" rel="noopener noreferrer">{{ name }}</a> {{ description }}</li>
-            </ol>
           </section>
         </article>
         <article class="panel objective-panel">
@@ -79,6 +85,27 @@ import { careerObjective, githubStats, openSource, skillGroups, skillTags } from
   gap: 20px;
   margin-top: 20px;
   align-items: start;
+}
+
+.open-source-panel {
+  margin-top: 20px;
+}
+
+.open-source-heading {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  a {
+    flex: 0 0 auto;
+    padding-top: 2px;
+    font-size: 0.86rem;
+  }
 }
 
 .panel {
@@ -235,6 +262,10 @@ import { careerObjective, githubStats, openSource, skillGroups, skillTags } from
   .overview-grid,
   .content-grid {
     gap: 12px;
+    margin-top: 12px;
+  }
+
+  .open-source-panel {
     margin-top: 12px;
   }
 
