@@ -10,6 +10,8 @@
     "serve": "vite"
   },
   "dependencies": {
+    "dompurify": "^3.4.12",
+    "marked": "^18.0.6",
     "vue": "^3.5.39"
   },
   "devDependencies": {
@@ -21,7 +23,7 @@
   },
   "packageManager": "pnpm@11.7.0",
   "engines": {
-		"node": ">=24.18.0",
-		"pnpm": ">=10.0.0"
-	}
+    "node": ">=24.18.0",
+    "pnpm": ">=10.0.0"
+  }
 }
