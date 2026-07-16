@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
@@ -18,5 +19,9 @@
     "vite": "^8.1.4",
     "vue-tsc": "^3.3.7"
   },
-  "packageManager": "pnpm@11.7.0"
+  "packageManager": "pnpm@11.7.0",
+  "engines": {
+		"node": ">=24.18.0",
+		"pnpm": ">=10.0.0"
+	}
 }
