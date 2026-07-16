@@ -1,5 +1,6 @@
 # 依赖目录
 node_modules/
+.pnpm-store/
 bower_components/
 
 # 构建输出

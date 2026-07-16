@@ -1,14 +1,25 @@
 # resume
 
-## Description
+基于 Vue 3、TypeScript 和 Vite 的个人在线简历。
 
-自研简历, 简洁优雅大气:
+## 开发
 
-https://blog.yyge.top/resume
+```bash
+pnpm install
+pnpm dev
+```
 
-如果有需要, 可以`clone`仓库, 魔改内容区块
+开发服务默认运行在 `http://localhost:3000`。
 
-后续有时间, 会抽离出单独的`npm`包
+构建静态文件：
+
+```bash
+pnpm build
+```
+
+## 维护内容
+
+简历文字和链接集中在 [src/data/resume.ts](./src/data/resume.ts)。修改个人信息、工作经历、项目经历、技能或开源项目时，通常只需编辑这个文件；页面组件不需要改动。
 
 ## History
 

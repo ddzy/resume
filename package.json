@@ -1,17 +1,21 @@
 {
   "name": "resume",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "npx only-allow pnpm",
-    "serve": "live-server --port=3002 --host=0.0.0.0 --open=index.html --quiet --verbose"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "serve": "vite"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.5.39"
+  },
   "devDependencies": {
-    "live-server": "^1.2.2"
-  }
+    "@vitejs/plugin-vue": "^6.0.8",
+    "typescript": "^5.9.3",
+    "vite": "^8.1.4",
+    "vue-tsc": "^3.3.7"
+  },
+  "packageManager": "pnpm@11.7.0"
 }
