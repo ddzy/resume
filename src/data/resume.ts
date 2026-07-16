@@ -31,8 +31,8 @@ export const profile = {
 export const skillTags = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue', 'VS Code']
 
 export const githubStats = [
-  ['contributes', '4926'],
-  ['pr', '53'],
+  ['累计 Star', '1877'],
+  ['近一年贡献', '353'],
 ] as const
 
 export const experiences = [
