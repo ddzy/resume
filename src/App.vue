@@ -59,3 +59,188 @@ import { careerObjective, githubStats, openSource, skillGroups, skillTags } from
     </section>
   </main>
 </template>
+
+<style scoped lang="scss">
+.page-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin: 32px auto 64px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.3fr) minmax(270px, 0.82fr);
+  gap: 20px;
+  margin-top: 20px;
+  align-items: start;
+}
+
+.panel {
+  padding: 28px;
+  background: var(--color-panel);
+  border: 1px solid var(--color-panel-border);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(32, 59, 56, 0.06);
+
+  h2 {
+    margin-bottom: 22px;
+    color: var(--color-ink);
+    font-size: 1.25rem;
+  }
+}
+
+.section-kicker {
+  margin-bottom: 6px;
+  color: #568b87;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.overview-grid h2 {
+  margin-bottom: 20px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  span {
+    padding: 8px 12px;
+    color: #155e75;
+    background: #e0f2f1;
+    border-radius: 999px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+  }
+}
+
+.github-overview {
+  dl {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  dl div {
+    padding: 12px;
+    background: #f1f7f6;
+    border-radius: 10px;
+  }
+
+  dt {
+    color: #5c6f72;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+  }
+
+  dd {
+    margin: 3px 0 0;
+    color: var(--color-ink);
+    font-size: 1.45rem;
+    font-weight: 700;
+  }
+}
+
+.section-heading {
+  margin-bottom: 4px;
+}
+
+.side-column {
+  display: grid;
+  gap: 20px;
+}
+
+.skill-group {
+  padding: 15px 0;
+  border-top: 1px solid #e3ecea;
+
+  &:first-of-type {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  h3 {
+    margin-bottom: 8px;
+    color: var(--color-ink);
+    font-size: 1rem;
+  }
+
+  li {
+    margin-bottom: 7px;
+    color: #41505a;
+    font-size: 0.87rem;
+    line-height: 1.65;
+  }
+}
+
+.objective-panel {
+  dl {
+    display: grid;
+    gap: 15px;
+  }
+
+  dl div {
+    display: grid;
+    gap: 3px;
+  }
+
+  dt {
+    color: var(--color-muted);
+    font-size: 0.82rem;
+  }
+
+  dd {
+    margin: 0;
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .side-column {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.55fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .page-shell {
+    width: min(100% - 24px, 560px);
+    margin: 12px auto 36px;
+  }
+
+  .overview-grid,
+  .content-grid,
+  .side-column {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-grid,
+  .content-grid {
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .panel {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+}
+</style>

@@ -12,3 +12,38 @@ import { projects } from '../data/resume'
     </article>
   </div>
 </template>
+
+<style scoped lang="scss">
+.project-list {
+  display: grid;
+  gap: 14px;
+}
+
+.project-card {
+  padding: 18px;
+  background: #f7faf9;
+  border: 1px solid #e2ecea;
+  border-radius: 12px;
+
+  h3 {
+    margin-bottom: 9px;
+    color: var(--color-ink);
+    font-size: 1rem;
+  }
+
+  p {
+    margin-bottom: 8px;
+    color: #41505a;
+    font-size: 0.87rem;
+    line-height: 1.68;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    color: #234946;
+  }
+}
+</style>
