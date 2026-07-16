@@ -1,4 +1,4 @@
-import avatarUrl from '../../source/images/miaomiao.jpg'
+import avatarUrl from '../assets/images/miaomiao.jpg'
 
 export type ResumeLink = { label: string; text: string; href: string }
 
