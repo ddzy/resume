@@ -109,7 +109,7 @@ import { openSourceProjects } from '../data/resume'
     flex: 1;
     padding: 7px 8px;
     color: #eff8f7;
-    background: #155e75;
+    background: var(--color-primary);
     border-radius: 6px;
     font-size: 0.72rem;
     font-weight: 600;
@@ -119,13 +119,13 @@ import { openSourceProjects } from '../data/resume'
     &:hover,
     &:focus-visible {
       color: #fff;
-      background: #0f4c5c;
+      background: #0f6f69;
       text-decoration: none;
     }
 
     + a {
-      color: #155e75;
-      background: #e0f2f1;
+      color: var(--color-link-hover);
+      background: var(--color-primary-soft);
 
       &:hover,
       &:focus-visible {
