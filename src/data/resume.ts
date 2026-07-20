@@ -9,32 +9,59 @@ export type Project = {
 	technologies: string;
 };
 
+export type ProjectGroup = {
+	title: string;
+	defaultExpanded?: boolean;
+	projects: Project[];
+};
+
 export const profile = {
 	name: '段朝阳',
-	role: '前端开发工程师',
+	role: '前端&Agent开发工程师',
 	avatarUrl,
 	facts: [
-		['年龄', '26'],
+		['年龄', '28'],
 		['学历', '本科'],
-		['工作年限', '4年'],
-		['应聘岗位', '前端开发'],
+		['工作年限', '5.5年'],
+		['应聘岗位', '前端&Agent开发'],
 	],
 	contacts: [
-		['WeChat', 'guoguoyang_555'],
-		['QQ', '1766083035'],
+		['WeChat', '-'],
+		['QQ', '-'],
 		['邮箱', 'alioeduan@foxmail.com', 'mailto:alioeduan@foxmail.com'],
 		['个人主页', 'https://yyge.top', 'https://yyge.top'],
 		['Github', 'https://github.com/ddzy', 'https://github.com/ddzy'],
 	],
 } as const;
 
-export const skillTags = [
-	'HTML',
-	'CSS',
-	'JavaScript',
-	'TypeScript',
-	'Vue',
-	'VS Code',
+export type SkillTagGroup = {
+	title: string;
+	tags: string[];
+};
+
+export const skillTagGroups: SkillTagGroup[] = [
+	{
+		title: '前端开发',
+		tags: ['vue', 'typeScript', 'css', 'nuxtjs'],
+	},
+	{
+		title: 'Agent 与 AI',
+		tags: ['agent开发', 'langchain', 'zod', 'ai编程', 'codex'],
+	},
+	{
+		title: '工程质量',
+		tags: [
+			'自动化测试',
+			'playwright',
+			'agent-browser',
+			'gitlab-cicd',
+			'jenkins',
+		],
+	},
+	{
+		title: '服务端与数据库',
+		tags: ['nestjs', 'prisma', 'postgresql', 'mongodb'],
+	},
 ];
 
 export const githubStats = [
@@ -42,7 +69,26 @@ export const githubStats = [
 	['近一年贡献', '353'],
 ] as const;
 
-export const experiences = [
+interface ExperienceItem {
+	period: string;
+	company: string;
+	responsibilities: string[];
+}
+
+export const experiences: ExperienceItem[] = [
+	{
+		period: '2025.3 - 2026.4',
+		company: '广州冠晨网络有限公司',
+		responsibilities: [
+			'参与公司海外金融借款app马甲包的开发, 主要负责墨西哥国家业务线',
+			'移动端App: 负责不同端化情况的H5借款/还款/申贷/分期页面与安卓原生的交互',
+			'业务后台: 负责app包体后台管理系统的功能迭代',
+			'催收后台: 负责墨象催收后台管理系统的功能迭代',
+			'静态官网: 负责各包体的PC端官网的开发',
+			'针对App的H5流程, 开发AI自动化工具, 开发新功能之后, 可自动跑主流程',
+			'为方便日常开发快速寻找包体/包名/App名称, 开发 Raycast 插件, 可快速找到',
+		],
+	},
 	{
 		period: '2020.11 - 2025.1',
 		company: '广州闪趣网络科技有限公司',
@@ -66,7 +112,83 @@ export const experiences = [
 	},
 ];
 
-export const projects: Project[] = [
+const guanchenProjects: Project[] = [
+	{
+		name: '借款&催收App的H5页面',
+		detailsMarkdown: [
+			'所有H5页面都是运行在安卓原生App内的, 通过自定义jsbridge与原生交互; 根据包体的等级, 会有不同的端化情况(端化程度指的是由原生实现的页面), 大多数包体只是登录注册流程端化, App的核心流程(`申贷`, `领款`, `还款`, `分期`)都由 `H5` 实现',
+			'为包体接入了 `chatwoot` 在线客服, 为了让客服入口在部分页面展示, 所以封装成了`插件`和 `mixins`, 方便将 `chatwoot` 的钩子和 Vue 生命周期结合, 同时统一初始化 `chatwoot`, 方便管理和后续维护',
+			'针对产品要求的对于 `chatwoot` 的定制化需求, 比如需要自定义 chatwoot 聊天框的样式; 需要在会话的时候传递一些额外的信息(比如订单id之类的); chatwoot 自身的 ui 会在移动端异形屏出现 bug; chatwoot 自身对于图片的预览功能欠缺; chatwoot 聊天消息出现的邮箱会受 App 的制约导致跳转行为不符合逾期等等, 我直接拉取并修改 chatwoot 源码, 通过与产品, 运维, 后端同事沟通, 采用公司自建 chatwoot 的方式来方便定制化',
+		].join('<br /><br />'),
+		links: [
+			{
+				label: '项目地址:',
+				text: '-',
+				href: '',
+			},
+		],
+		technologies: 'Vue2, Jenkins, Chatwoot, WebView',
+	},
+	{
+		name: '借款App各种后台',
+		detailsMarkdown: [
+			'主要是业务后台, 催收后台等常规的后台管理系统的功能增删改查迭代, 包括包体的各种配置, 资方的配置, 借款单管理等等',
+		].join('<br /><br />'),
+		links: [
+			{
+				label: '项目地址:',
+				text: '-',
+				href: '',
+			},
+		],
+		technologies: 'Vue2, Admin, 后台管理系统',
+	},
+	{
+		name: '借款App官网',
+		detailsMarkdown: [
+			'纯静态官网, 有首页, 隐私政策, 关于我们, 产品介绍, 联系我们等页面, 采用 `Vue` + `Vant` 开发',
+		].join('<br /><br />'),
+		links: [
+			{
+				label: '项目地址:',
+				text: '-',
+				href: '',
+			},
+		],
+		technologies: 'Vue2, Admin, 后台管理系统',
+	},
+	{
+		name: '借款App主流程UI自动化测试工具',
+		detailsMarkdown: [
+			'针对后续可能在开发新功能的过程中, 对于代码的改动可能会影响借款主流程, 所以我结合 `AI` 决策流与 `agent-browser`, 利用 `agent-browser` 识别整个页面的可交互元素, 包括元素的内容, 元素的语义化(`role`), 然后将这些可交互元素格式化发给 AI 大模型, 让大模型决定下一步是继续填写表单, 还是点击提交按钮, 还是关闭弹窗, 整个流程自动化, 方便在后续增加新功能时快速自测;',
+			'整个自动化测试工具只需要提供一个本地开发链接, 比如 http://localhost:3000, 然后会通过 `sse` 事件流实时输出当前测试步骤',
+		].join('<br /><br />'),
+		links: [
+			{
+				label: '项目地址:',
+				text: '-',
+				href: '',
+			},
+		],
+		technologies: 'Vue3, Agent, 自动化测试, AI大模型',
+	},
+	{
+		name: 'Raycast包体快速查询插件',
+		detailsMarkdown: [
+			'为了在繁多的马甲包快速根据`测试包名`, `正式包名`, `App名`查找对应包体, 所以我写了个 `Raycast` 插件, 可在 `Mac` 上通过快捷键快速搜索并过滤包体, 节省了翻文档的时间',
+		].join('<br /><br />'),
+		links: [
+			{
+				label: '项目地址:',
+				text: '-',
+				href: '',
+			},
+		],
+		technologies: 'Vue3, Agent, 自动化测试, AI大模型',
+	},
+];
+
+const shanquProjects: Project[] = [
 	{
 		name: '安卓指趣游戏盒的H5活动页',
 		detailsMarkdown:
@@ -103,6 +225,9 @@ export const projects: Project[] = [
 		detailsMarkdown: '公司官网，响应式，兼容PC端和移动端',
 		technologies: 'Vue2、TS、CSS媒体查询等...',
 	},
+];
+
+const personalProjects: Project[] = [
 	{
 		name: '【个人项目】vue3-ui',
 		detailsMarkdown:
@@ -146,6 +271,22 @@ export const projects: Project[] = [
 			},
 		],
 		technologies: 'uniapp、hbuilderx、unicloud...',
+	},
+];
+
+export const projectGroups: ProjectGroup[] = [
+	{
+		title: '冠晨',
+		defaultExpanded: true,
+		projects: guanchenProjects,
+	},
+	{
+		title: '闪趣',
+		projects: shanquProjects,
+	},
+	{
+		title: '个人',
+		projects: personalProjects,
 	},
 ];
 
@@ -242,5 +383,5 @@ export const openSourceProjects: readonly OpenSourceProject[] = [
 
 export const careerObjective = [
 	['期望城市', '广州、东莞'],
-	['期望岗位', '前端开发工程师'],
+	['期望岗位', '前端&Agent开发工程师'],
 ] as const;

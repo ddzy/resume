@@ -3,7 +3,7 @@ import ExperienceList from './components/ExperienceList.vue'
 import OpenSourceList from './components/OpenSourceList.vue'
 import ProjectList from './components/ProjectList.vue'
 import ResumeHeader from './components/ResumeHeader.vue'
-import { careerObjective, githubStats, skillGroups, skillTags } from './data/resume'
+import { careerObjective, githubStats, skillGroups, skillTagGroups } from './data/resume'
 </script>
 
 <template>
@@ -14,8 +14,13 @@ import { careerObjective, githubStats, skillGroups, skillTags } from './data/res
       <article class="panel skill-overview">
         <p class="section-kicker">技能分布</p>
         <h2>掌握技术</h2>
-        <div class="tag-list">
-          <span v-for="skill in skillTags" :key="skill">{{ skill }}</span>
+        <div class="skill-tag-groups">
+          <section v-for="group in skillTagGroups" :key="group.title" class="skill-tag-group">
+            <h3>{{ group.title }}</h3>
+            <div class="tag-list">
+              <span v-for="tag in group.tags" :key="tag">{{ tag }}</span>
+            </div>
+          </section>
         </div>
       </article>
       <article class="panel github-overview">
@@ -135,13 +140,34 @@ import { careerObjective, githubStats, skillGroups, skillTags } from './data/res
   margin-bottom: 20px;
 }
 
+.skill-tag-groups {
+  display: grid;
+  gap: 14px;
+}
+
+.skill-tag-group {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+
+  h3 {
+    padding-top: 7px;
+    color: var(--color-muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 
   span {
-    padding: 8px 12px;
+    padding: 6px 10px;
     color: #155e75;
     background: #e0f2f1;
     border-radius: 999px;
@@ -272,6 +298,15 @@ import { careerObjective, githubStats, skillGroups, skillTags } from './data/res
   .panel {
     padding: 22px 18px;
     border-radius: 14px;
+  }
+
+  .skill-tag-group {
+    grid-template-columns: 1fr;
+    gap: 6px;
+
+    h3 {
+      padding-top: 0;
+    }
   }
 }
 </style>
