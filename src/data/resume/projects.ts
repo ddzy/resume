@@ -87,11 +87,33 @@ const shanquProjects: Project[] = [
 
 const personalProjects: Project[] = [
 	{
+		name: '【个人项目】stage-07-agent-observability-evaluation',
+		detailsMarkdown: [
+			'面向企业知识库与任务执行场景的小型全栈 Agent 工程项目，串联 Chat、RAG、Tool Calling、Human-in-the-loop、Run Trace、Metrics 与 Eval，重点展示 Agent 从“能聊天”到“可执行、可追踪、可确认、可评估”的产品工程链路。',
+			'实现基于知识库的流式问答、工具调用与高风险操作人工确认；以 `AgentRun`、`AgentRunStep`、`AgentToolCall` 持久化任务执行过程，并提供运行详情、检索观测、指标聚合和结构化 Eval 回归验证。',
+		].join('<br /><br />'),
+		links: [
+			{
+				label: '在线预览:',
+				text: 'https://stage07.yyge.top',
+				href: 'https://stage07.yyge.top',
+			},
+			{
+				label: '项目地址:',
+				text: 'https://github.com/ddzy/stage-07-agent-observability-evaluation',
+				href: 'https://github.com/ddzy/stage-07-agent-observability-evaluation',
+			},
+		],
+		technologies:
+			'agent开发, nuxt4, vue3, typescript, prisma, postgresql, zod',
+	},
+	{
 		name: '【个人项目】vue3-ui',
 		detailsMarkdown:
 			'Vue3组件库，已实现Table、Watermark等42个常用组件，有基本的单元测试、说明文档',
 		links: [
-			{ label: '在线预览:', text: 'https://yyge.top/vue3-ui/', href: 'https://yyge.top/vue3-ui/' },
+			{ label: '在线预览:', text: 'https://vue3-ui.yyge.top', href: 'https://vue3-ui.yyge.top' },
+			{ label: '项目地址:', text: 'https://github.com/ddzy/vue3-ui', href: 'https://github.com/ddzy/vue3-ui' },
 			{ label: 'npm地址:', text: 'npm install @felibrary/vue3-ui', href: 'https://www.npmjs.com/package/@felibrary/vue3-ui' },
 		],
 		technologies: 'vue3, typescript',
