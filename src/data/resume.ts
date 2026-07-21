@@ -127,7 +127,7 @@ const guanchenProjects: Project[] = [
 				href: '',
 			},
 		],
-		technologies: 'Vue2, Jenkins, Chatwoot, WebView',
+		technologies: 'vue2, jenkins, chatwoot, webview',
 	},
 	{
 		name: '借款App各种后台',
@@ -141,7 +141,7 @@ const guanchenProjects: Project[] = [
 				href: '',
 			},
 		],
-		technologies: 'Vue2, Admin, 后台管理系统',
+		technologies: 'vue2, admin, 后台管理系统',
 	},
 	{
 		name: '借款App官网',
@@ -155,7 +155,7 @@ const guanchenProjects: Project[] = [
 				href: '',
 			},
 		],
-		technologies: 'Vue2, Admin, 后台管理系统',
+		technologies: 'vue3, 官网, css',
 	},
 	{
 		name: '借款App主流程UI自动化测试工具',
@@ -170,7 +170,7 @@ const guanchenProjects: Project[] = [
 				href: '',
 			},
 		],
-		technologies: 'Vue3, Agent, 自动化测试, AI大模型',
+		technologies: 'vue3, agent, 自动化测试, ai大模型',
 	},
 	{
 		name: 'Raycast包体快速查询插件',
@@ -184,7 +184,7 @@ const guanchenProjects: Project[] = [
 				href: '',
 			},
 		],
-		technologies: 'Vue3, Agent, 自动化测试, AI大模型',
+		technologies: 'vue3, raycast, 插件, typescript',
 	},
 ];
 
@@ -200,7 +200,7 @@ const shanquProjects: Project[] = [
 				href: 'https://app-static.96966.com/web/v6d7/',
 			},
 		],
-		technologies: 'Vue2、TS等...',
+		technologies: 'vue2、typescript',
 	},
 	{
 		name: '公司内部的后台管理系统',
@@ -218,12 +218,12 @@ const shanquProjects: Project[] = [
 				href: 'https://app-static.96966.com/web/zhiqu-web-common/index.html',
 			},
 		],
-		technologies: 'Vue3、TS等...',
+		technologies: 'vue2、typescript',
 	},
 	{
 		name: '闪趣官网',
 		detailsMarkdown: '公司官网，响应式，兼容PC端和移动端',
-		technologies: 'Vue2、TS、CSS媒体查询等...',
+		technologies: 'vue2, typescript, css',
 	},
 ];
 
@@ -244,7 +244,7 @@ const personalProjects: Project[] = [
 				href: 'https://www.npmjs.com/package/@felibrary/vue3-ui',
 			},
 		],
-		technologies: 'Vue3、TS等...',
+		technologies: 'vue3, typescript',
 	},
 	{
 		name: '【个人项目】flutter-github-app',
@@ -257,7 +257,7 @@ const personalProjects: Project[] = [
 				href: 'https://github.com/ddzy/github',
 			},
 		],
-		technologies: 'Flutter，API使用Github官方的Graphql-API...',
+		technologies: 'flutter, graphql',
 	},
 	{
 		name: '【个人项目】uniapp-cloud-demo',
