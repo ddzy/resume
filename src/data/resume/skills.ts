@@ -1,0 +1,50 @@
+import type { SkillTagGroup } from './types';
+
+export const skillTagGroups: SkillTagGroup[] = [
+	{
+		title: '前端开发',
+		tags: ['vue', 'typeScript', 'css', 'nuxtjs'],
+	},
+	{
+		title: 'Agent 与 AI',
+		tags: ['agent开发', 'langchain', 'zod', 'ai编程', 'codex'],
+	},
+	{
+		title: '工程质量',
+		tags: [
+			'自动化测试',
+			'playwright',
+			'agent-browser',
+			'gitlab-cicd',
+			'jenkins',
+		],
+	},
+	{
+		title: '服务端与数据库',
+		tags: ['nestjs', 'prisma', 'postgresql', 'mongodb'],
+	},
+];
+
+export const skillGroups = [
+	{
+		title: '技术栈',
+		items: [
+			'本人大二起自学前端, 独立完成诸如毕设等中小型项目',
+			'熟悉Vue2、Vue3、TS等常用前端技术',
+			'涉猎过Uniapp、Flutter等小程序及跨端开发技术，并写过Demo',
+			'涉猎过NodeJS、MongoDB、Dart等后端技术',
+			'了解Linux基本的操作命令，涉猎过docker、jenkins、nginx等工具，例如通过jenkins结合GitHub-Webhook实现自动部署',
+		],
+	},
+	{
+		title: '社区',
+		items: [
+			'日常活跃于掘金、思否、V2EX等各大开发者社区, 关注业内前沿信息',
+			'经常活跃于 GitHub, Github 提交 commit 超过 4000 次，为 utility、react-zmage、vscode-extension-doc-zh 等知名项目贡献过代码',
+		],
+	},
+	{
+		title: '开发工具',
+		items: ['熟练使用主流开发工具 VS Code, 并为其开发过插件'],
+	},
+];
