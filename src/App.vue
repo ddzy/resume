@@ -3,7 +3,8 @@ import ExperienceList from './components/ExperienceList.vue'
 import OpenSourceList from './components/OpenSourceList.vue'
 import ProjectList from './components/ProjectList.vue'
 import ResumeHeader from './components/ResumeHeader.vue'
-import { careerObjective, githubStats, skillGroups, skillTagGroups } from './data/resume'
+import SkillList from './components/SkillList.vue'
+import { careerObjective, githubStats, skillTagGroups } from './data/resume'
 </script>
 
 <template>
@@ -57,10 +58,7 @@ import { careerObjective, githubStats, skillGroups, skillTagGroups } from './dat
       <aside class="side-column">
         <article class="panel skills-panel">
           <div class="section-heading"><p class="section-kicker">Skills</p><h2>掌握技能</h2></div>
-          <section v-for="group in skillGroups" :key="group.title" class="skill-group">
-            <h3>{{ group.title }}</h3>
-            <ol><li v-for="item in group.items" :key="item">{{ item }}</li></ol>
-          </section>
+          <SkillList />
         </article>
         <article class="panel objective-panel">
           <p class="section-kicker">Objective</p><h2>求职意向</h2>
@@ -210,33 +208,6 @@ import { careerObjective, githubStats, skillGroups, skillTagGroups } from './dat
 .side-column {
   display: grid;
   gap: 20px;
-}
-
-.skill-group {
-  padding: 15px 0;
-  border-top: 1px solid #e3ecea;
-
-  &:first-of-type {
-    padding-top: 0;
-    border-top: 0;
-  }
-
-  &:last-child {
-    padding-bottom: 0;
-  }
-
-  h3 {
-    margin-bottom: 8px;
-    color: var(--color-ink);
-    font-size: 1rem;
-  }
-
-  li {
-    margin-bottom: 7px;
-    color: #41505a;
-    font-size: 0.87rem;
-    line-height: 1.65;
-  }
 }
 
 .objective-panel {

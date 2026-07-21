@@ -28,23 +28,23 @@ export const skillTagGroups: SkillTagGroup[] = [
 export const skillGroups = [
 	{
 		title: '技术栈',
-		items: [
+		itemsMarkdown: [
 			'本人大二起自学前端, 独立完成诸如毕设等中小型项目',
-			'熟悉Vue2、Vue3、TS等常用前端技术',
-			'涉猎过Uniapp、Flutter等小程序及跨端开发技术，并写过Demo',
-			'涉猎过NodeJS、MongoDB、Dart等后端技术',
-			'了解Linux基本的操作命令，涉猎过docker、jenkins、nginx等工具，例如通过jenkins结合GitHub-Webhook实现自动部署',
+			'熟悉 **vue、typeScript** 等常用前端技术',
+			'涉猎过 **UniApp、Flutter** 等小程序及跨端开发技术，并写过 Demo',
+			'涉猎过 **Node.js、MongoDB、Dart** 等服务端技术',
+			'了解 **Docker、Jenkins、Nginx** 等工具；例如通过 `Jenkins + GitHub Webhook` 实现自动部署',
 		],
 	},
 	{
 		title: '社区',
-		items: [
-			'日常活跃于掘金、思否、V2EX等各大开发者社区, 关注业内前沿信息',
-			'经常活跃于 GitHub, Github 提交 commit 超过 4000 次，为 utility、react-zmage、vscode-extension-doc-zh 等知名项目贡献过代码',
+		itemsMarkdown: [
+			'日常活跃于 **掘金、思否、V2EX** 等各大开发者社区，关注业内前沿信息',
+			'经常活跃于 **GitHub**，累计提交 `4000+` 次，为 `utility`、`react-zmage`、`vscode-extension-doc-zh` 等项目贡献过代码',
 		],
 	},
 	{
 		title: '开发工具',
-		items: ['熟练使用主流开发工具 VS Code, 并为其开发过插件'],
+		itemsMarkdown: ['熟练使用 **VS Code**，并为其开发过插件'],
 	},
 ];
