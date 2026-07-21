@@ -32,6 +32,14 @@ export const openSourceProjects: readonly OpenSourceProject[] = [
 		forks: 0,
 	},
 	{
+		name: 'flutter-github-app',
+		githubHref: 'https://github.com/ddzy/github',
+		description:
+			'基于 GitHub GraphQL API 的 Flutter 移动端 GitHub App，涵盖登录、仓库、Issue 与 Starred 等页面',
+		stars: 0,
+		forks: 0,
+	},
+	{
 		name: 'ts-utility-plugins',
 		githubHref: 'https://github.com/ddzy/ts-utility-plugins',
 		description: '纯原生 js/ts 插件、工具方法库',
