@@ -24,7 +24,4 @@ export const githubStats = [
 	['近一年贡献', '353'],
 ] as const;
 
-export const careerObjective = [
-	['期望城市', '广州、东莞、深圳'],
-	['期望岗位', '前端&Agent开发工程师'],
-] as const;
+export const careerObjective = [['期望岗位', '前端&Agent开发工程师']] as const;
