@@ -25,6 +25,6 @@ export const githubStats = [
 ] as const;
 
 export const careerObjective = [
-	['期望城市', '广州、东莞'],
+	['期望城市', '广州、东莞、深圳'],
 	['期望岗位', '前端&Agent开发工程师'],
 ] as const;
